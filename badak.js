@@ -126,7 +126,11 @@ async function startBot() {
 
                 const ok = await sendWithRetry(sock, t, {
                     text: 'apa kabar kamu'
-                await delay 5 scond
+
+                        setTimeout(function() {
+    console.log("Waktu tunggu selesai!");
+    alert("3 detik telah berlalu");
+}, 3000);
                 const ok = await sendWithRetry(sock, t, {
                     text: 'kerja di mana sekarang'
                 });
