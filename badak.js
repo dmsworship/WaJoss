@@ -126,6 +126,9 @@ async function startBot() {
 
                 const ok = await sendWithRetry(sock, t, {
                     text: 'apa kabar kamu'
+                await delay 5 scond
+                const ok = await sendWithRetry(sock, t, {
+                    text: 'kerja di mana sekarang'
                 });
 
                 if (ok) console.log(`[OK] ${t}`);
