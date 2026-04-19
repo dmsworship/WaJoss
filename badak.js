@@ -127,7 +127,6 @@ async function startBot() {
                 const ok = await sendWithRetry(sock, t, {
                     text: 'apa kabar kamu'
 
-            let hitungMundur = 10; // Waktu dalam detik
 const timer = setInterval(function() {
     hitungMundur--;
     console.log("Sisa waktu: " + hitungMundur + " detik");
