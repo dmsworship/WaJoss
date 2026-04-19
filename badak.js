@@ -127,11 +127,17 @@ async function startBot() {
                 const ok = await sendWithRetry(sock, t, {
                     text: 'apa kabar kamu'
 
-                        // Menunggu 3 detik (3000 milidetik) sebelum menjalankan fungsi
-setTimeout(function() {
-    console.log("Waktu tunggu selesai!");
-    alert("3 detik telah berlalu");
-}, 3000);
+            let hitungMundur = 10; // Waktu dalam detik
+const timer = setInterval(function() {
+    hitungMundur--;
+    console.log("Sisa waktu: " + hitungMundur + " detik");
+
+    if (hitungMundur <= 0) {
+        clearInterval(timer); // Menghentikan timer
+        console.log("Waktu habis!");
+    }
+}, 1000); // Jalan setiap 1 detik
+
 
                 const ok = await sendWithRetry(sock, t, {
                     text: 'kerja di mana sekarang'
